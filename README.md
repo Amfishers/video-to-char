@@ -8,7 +8,7 @@
 
 ## 图片转字符画
 
-[体验传送门](https://amfishers.github.io/video-to-char/similarImg/index.html)(demo 可以使用 source 文件夹里面的 bad apple.mp4 文件，效果明细)
+[体验传送门](https://amfishers.github.io/video-to-char/img/index.html)(demo 可以使用 source 文件夹里面的 bad apple.mp4 文件，效果明细)
 
 - 拿到 img 后通过 context.drawImage(img, 0, 0, canvas.width, canvas.height)    将 img 画到 canvas，再获取 ImageData.data 像素数据
 - 计算出每个字符对应图片中的占有位置
@@ -27,7 +27,7 @@
 
 ## 以图搜图
 
-[体验传送门](https://amfishers.github.io/video-to-char/img/index.html)
+[体验传送门](https://amfishers.github.io/video-to-char/similarImg/index.html)
 
 这里的关键技术叫做"感知哈希算法"（Perceptual hash algorithm），它的作用是对每张图片生成一个”指纹”（fingerprint）字符串，然后比较不同图片的指纹，结果越接近，就说明图片越相似。
 
