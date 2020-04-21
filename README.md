@@ -8,7 +8,7 @@
 
 ## 图片转字符画
 
-[体验传送门](https://amfishers.github.io/video-to-char/similarImg/index.html)
+[体验传送门](https://amfishers.github.io/video-to-char/similarImg/index.html)(demo 可以使用 source 文件夹里面的 bad apple.mp4 文件，效果明细)
 
 - 拿到 img 后通过 context.drawImage(img, 0, 0, canvas.width, canvas.height)    将 img 画到 canvas，再获取 ImageData.data 像素数据
 - 计算出每个字符对应图片中的占有位置
