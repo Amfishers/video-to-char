@@ -1,0 +1,103 @@
+---
+title: similarImg
+date: 2019-08-21 01:49:38
+tags: similarImg
+layout: false
+---
+
+<!DOCTYPE html>
+<html lang="chn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相似图片</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 6px 0;
+    text-align: center;
+}
+.card {
+    margin: 0 10px;
+    border: 10px solid #fff;
+    box-shadow: 6px 2px 12px #8b8b8b;
+    width: 280px;
+}
+.card img {
+    width: 100%;
+    height: 416px;
+}
+.card .hamming {
+    padding: 12px 6px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.compare {
+    display: flex;
+}
+</style>
+<body>
+    <div class="row">
+        <div class="card">
+            <img id="origin" src="./images/monalisa.jpeg" />
+            <div class="hamming title">
+                原图
+            </div>        
+        </div>
+
+        <div class="compare">
+            <div class="card">
+                <img id="dim" src="./images/monalisa-dim.jpg" />
+                <div class="hamming">
+                    汉明距离： <span id="result-dim"></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img id="mosaic" src="./images/monalisa-mosaic.jpg" />
+                <div class="hamming">
+                    汉明距离： <span id="result-mosaic"></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img id="textImg" src="./images/monalisa-text.jpg" />
+                <div class="hamming">
+                    汉明距离： <span id="result-text"></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img id="hanDou" src="./images/handou.jpeg" />
+                <div class="hamming">
+                    汉明距离： <span id="result-handou"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./index.js"></script>
+<script>
+window.onload = function() {
+    const origin = document.getElementById('origin')
+    const dim = document.getElementById('dim')
+    const mosaic = document.getElementById('mosaic')
+    const textImg = document.getElementById('textImg')
+    const hanDou = document.getElementById('hanDou')
+    
+    document.getElementById('result-dim').innerHTML = showHanMing(origin, dim)
+    document.getElementById('result-mosaic').innerHTML = showHanMing(origin, mosaic)
+    document.getElementById('result-text').innerHTML = showHanMing(origin, textImg)
+    document.getElementById('result-handou').innerHTML = showHanMing(origin, hanDou)
+}
+</script>
+</body>
+</html>

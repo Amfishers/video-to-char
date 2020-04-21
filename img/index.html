@@ -1,0 +1,47 @@
+---
+title: img2char
+date: 2019-08-11 17:08:38
+tags: img2char
+layout: false
+---
+
+<!DOCTYPE html>
+<html>
+
+<head lang="chn">
+    <meta charset="UTF-8">
+    <title>Char Picture</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <aside class="sidebar">
+            <h1 class="sidebar-title">Char Picture</h1>
+            <div class="sidebar-opt">
+                <div class="upload-btn">
+                    <label for="uploadFile" class="upload-label button">+ 上传图片</label>
+                    <input id="uploadFile" type="file" accept=".jpg,.gif,.png,.jpeg">
+                </div>
+                <button class="button show-btn" id="showBtn">展示</button>
+            </div>
+            <div class="sidebar-preview">
+                <div class="sidebar-img"></div>
+            </div>
+            <div class="subtitle">显示方式</div>
+            <div class="show-style">
+                <button class="button" id="showPre">pre</button>
+                <button class="button" id="showCanvas">canvas</button>
+            </div>
+            <p class="copyright">POWERBY: Fisher</p>
+        </aside>
+        <section class="main">
+            <div class="main-wrapper">
+                <div class="panel panel-pre" style="display: block;"><pre id="show"></pre></div>
+                <div class="panel panel-canvas" style="display: none;"><canvas id="charCanvas"></canvas></div>
+            </div>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+---
+title: video2char
+date: 2019-08-11 17:08:38
+tags: img2char
+layout: false
+---
+<!DOCTYPE html>
+<html>
+
+<head lang="chn">
+    <meta charset="UTF-8">
+    <title>Char Video</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <aside class="sidebar">
+            <h1 class="sidebar-title">Char Video</h1>
+            <div class="sidebar-opt">
+                <div class="upload-btn">
+                    <label for="uploadFile" class="upload-label button">+ 上传视屏</label>
+                    <input id="uploadFile" type="file" accept=".mp4">
+                </div>
+                <button class="button show-btn" id="showBtn">展示</button>
+            </div>
+            <div class="sidebar-preview">
+                <div class="sidebar-img">
+                    <video id="video" controls="controls"></video>
+                </div>
+            </div>
+            <p class="copyright">POWERBY: Fisher</p>
+        </aside>
+        <section class="main">
+            <div class="main-wrapper">
+                <div class="panel panel-pre">
+                    <pre id="preview"></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./handler.js"></script>
+</body>
+</html>
